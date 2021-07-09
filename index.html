@@ -244,7 +244,7 @@
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-primary uzz">Submit Patient Informed Consent Form</button>
+                <button onclick="createRow()" class="btn btn-primary uzz">Submit Patient Informed Consent Form</button>
                 <input type="hidden" name="submitted" id="submitted" value="true" />
                 <!-- <button type="submit" class="btn btn-default">Sign in</button>-->
             </div>
@@ -258,23 +258,55 @@
     <table class="table">
         <thead>
             <tr>
-                <th></th>
-                <th></th>
-                <th></th>
+                <th>Name1</th>
+                <th>Signature1</th>
+                <th>Date1</th>
             </tr>
         </thead>
-        <tbody class="consent-tbody">
+        <tbody class="consent-tbody1">
+        </tbody>
+    </table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name2</th>
+                <th>Signature2</th>
+                <th>Date2</th>
+            </tr>
+        </thead>
+        <tbody class="consent-tbody2">
+        </tbody>
+    </table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name3</th>
+                <th>Signature3</th>
+                <th>Date3</th>
+            </tr>
+        </thead>
+        <tbody class="consent-tbody3">
+        </tbody>
+    </table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name4</th>
+                <th>Signature4</th>
+                <th>Date4</th>
+            </tr>
+        </thead>
+        <tbody class="consent-tbody4">
         </tbody>
     </table>
 </div>
 
 <div class="pujaspace1"></div>
 
-
+<script type="text/javascript" src="script.js"></script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script type="text/javascript" src="script.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 </body>
 </html>
