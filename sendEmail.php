@@ -99,7 +99,9 @@
 	$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 	// Sending email
-	mail($to, $subject, $message, $headers);
-	header('Location:index.html');
-	
+	if(mail($to, $subject, $message, $headers)){
+	    header('Location:index.html');
+	} else{
+	    echo 'Unable to send email. Please try again.';
+	}
  ?>
