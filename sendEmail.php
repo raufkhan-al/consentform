@@ -1,4 +1,18 @@
 <?php 
+
+	//Import PHPMailer classes into the global namespace
+	//These must be at the top of your script, not inside a function
+	use PHPMailer\PHPMailer\PHPMailer;
+	use PHPMailer\PHPMailer\SMTP;
+	use PHPMailer\PHPMailer\Exception;
+
+	//Load Composer's autoloader
+	require 'vendor/autoload.php';
+
+	//Create an instance; passing `true` enables exceptions
+	$mail = new PHPMailer(true);
+
+
 	$name1 = $_POST['name1'];
 	$signature1 = $_POST['signature1'];
 	$date1 = $_POST['date1'];
@@ -12,9 +26,12 @@
 	$signature4 = $_POST['signature1'];
 	$date4 = $_POST['date1'];
 
-	$to = 'hauwal4969@gmail.com'; 
-	$subject = "New Consent Form Submission"; 
-	$message = '<!DOCTYPE html>
+	$mail->addAddress('hauwal4969@gmail.com'); 
+	$mail->From = "hauwal4969@gmail.com";
+	//Send HTML or Plain Text email
+	$mail->isHTML(true);
+	$mail->Subject = "New Consent Form Submission"; 
+	$mail->Body = '<!DOCTYPE html>
 	<html>
 	<head>
 		<meta charset="utf-8">
@@ -94,14 +111,11 @@
 	</body>
 	</html>';
 
-	// Set content-type header for sending HTML email 
-	$headers = "MIME-Version: 1.0" . "\r\n"; 
-	$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
 	// Sending email
-	if(mail($to, $subject, $message, $headers)){
-	    header('Location:index.html');
-	} else{
-	    echo 'Unable to send email. Please try again.';
+	try {
+    $mail->send();
+    header('Location:index.html');
+	} catch (Exception $e) {
+	    echo "Mailer Error: " . $mail->ErrorInfo;
 	}
  ?>
