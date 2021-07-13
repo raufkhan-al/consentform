@@ -17,15 +17,15 @@
         $name1 = $_POST['name1'];
         $signature1 = $_POST['signature1'];
         $date1 = $_POST['date1'];
-        $name2 = $_POST['name1'];
-        $signature2 = $_POST['signature1'];
-        $date2 = $_POST['date1'];
-        $name3 = $_POST['name1'];
-        $signature3 = $_POST['signature1'];
-        $date3 = $_POST['date1'];
-        $name4 = $_POST['name1'];
-        $signature4 = $_POST['signature1'];
-        $date4 = $_POST['date1'];
+        $name2 = $_POST['name2'];
+        $signature2 = $_POST['signature2'];
+        $date2 = $_POST['date2'];
+        $name3 = $_POST['name3'];
+        $signature3 = $_POST['signature3'];
+        $date3 = $_POST['date3'];
+        $name4 = $_POST['name4'];
+        $signature4 = $_POST['signature4'];
+        $date4 = $_POST['date4'];
 
         $message = '
         <!DOCTYPE html>
@@ -36,15 +36,15 @@
         </head>
         <body>
             <style>
-                table{
-                    border-collapse: collapse;
-                    padding: 20px 20px;
-                }
+
                 td,th {
-                    text-align: center;
-                    border: 1px solid #dddddd;
                     text-align: left;
                     padding: 8px;
+                }
+
+                table, th, td {
+                  border: 1px solid black;
+                  border-collapse: collapse;
                 }
             </style>
             <table style="width:100%">
@@ -128,8 +128,8 @@
 
         $mail->isHTML(true);   
 
-        $mail->setFrom('hauwal4969@gmail.com');
-        $mail->addAddress('hauwal4969@gmail.com'); 
+        $mail->setFrom('RaufKham953@gmail.com','Consent Form Website');
+        $mail->addAddress('RaufKham953@gmail.com'); 
         //Send HTML or Plain Text email
         $mail->isHTML(true);
         $mail->Subject = "New Consent Form Submission"; 
