@@ -114,7 +114,7 @@
         $mail->isSMTP();                           // Set mailer to use SMTP
         $mail->Host = 'smtp.gmail.com';            // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                    // Enable SMTP authentication
-        $mail->Username = 'hauwal4969@gmail.com'; // SMTP username
+        $mail->Username = 'raufkham953@gmail.com'; // SMTP username
         $mail->Password = 'oarwkxrbvipazotz';      // SMTP password (used google Generated app password) 
         $mail->SMTPOptions = array(
             'ssl' => array(
